@@ -1,0 +1,332 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    background-color: hsl(218, 28%, 13%);
+    color: white;
+}
+.wrapper {
+    display: grid;
+    justify-content: center;
+    gap: 50px;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header-page"
+    "section-page"    
+    "footer-page";
+}
+
+h1, h2, h3, nav {
+    font-family: 'Raleway', sans-serif;
+}
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    padding-top: 2em;
+    display: grid;
+    text-align: center;
+    background: hsl(217, 28%, 15%) url('./images/bg-curvy-mobile.svg') no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    margin-bottom: 50px;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "logo nav nav"
+    "intro intro intro";
+    grid-area: header-page;
+
+}
+.logo {
+
+    margin-left: 1em;
+    width: 100px;
+    grid-area: logo;
+}
+.intro {
+    max-width: 80%;
+    margin: 0 auto;
+    grid-area: intro;
+}
+nav {
+    text-align: right;
+    margin: 0;
+    grid-area: nav;
+    justify-content: flex-end;
+}
+
+
+
+
+
+ul, li {
+    font-size: 0.75rem;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    list-style-type: none;
+    padding-right: 1rem;
+    
+}
+
+.illustration {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.productive {
+    grid-area: productive;
+    text-align: center;
+    margin: 100px auto;
+    justify-self: center;
+}
+.productive-details {
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.testimonials {
+    grid-area: testimonials;
+}
+
+
+
+.features p {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto 50px;
+
+
+}
+
+button {
+    border: none;
+    padding: 1.5em 6em;
+    border-radius: 3em;
+    color: white;
+    font-weight: 400;
+    background-image: linear-gradient(hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    text-align: center;
+    margin: 0 auto;
+  
+}
+
+
+
+[class*="feature-"] {
+    margin: 0 auto;
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    padding: 1.5em 6em;
+    border-radius: 3em;
+    margin-bottom: 1em;
+    border-style: none;
+}
+.cta button {
+    width: 90%;
+    padding: 1.5em 6em;
+
+}
+
+a {
+    text-decoration: none;
+   color: hsl(176, 68%, 64%);
+}
+.link {
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid hsl(176, 68%, 64%);
+}
+
+.quotes {
+    width: 30px;
+    position: relative;
+    left: -32px;
+    bottom: 58px;
+}
+[class*="testimonial-"] {
+    width: 80%;
+    text-align: left;
+    margin: 0 auto;
+    border: 2px solid  hsl(219, 30%, 18%);
+    border-radius: 5px;
+    margin-bottom: 2em;
+    background-color: hsl(219, 30%, 18%);
+
+    padding: 2em;
+}
+
+.profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+.profile h4 {
+    padding-top: 0.5em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.profile p {
+   margin: 0;
+   padding-top: 0.4em; 
+   font-size: 0.75rem;
+}
+
+.cta {
+    grid-area: cta;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2em;
+    border-radius: 10px;
+    width: 80%;
+    background-color: hsl(217, 28%, 15%);
+}
+
+.social-icons {
+    text-align: center;
+}
+i {
+    padding: 0.5em;
+    margin-right: 1em;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+[class*="contact-"] {
+    display: flex;
+    margin: 20px 20px 20px 0;
+}
+.contact-1 img {
+    width: 15px;
+    height: 20px;
+}
+
+.details {
+    width: 70%;
+    margin-left: 20px;
+}
+
+[class*="footer-nav-"] {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+footer {
+    margin: 50px;
+    grid-area: footer-page;
+}
+
+
+@media only screen and (min-width: 778px) {
+
+    header {
+        background: hsl(217, 28%, 15%) url('./images/bg-curvy-desktop.svg') no-repeat;
+        background-size: contain;
+        background-position: center bottom;
+    }
+
+    .features {
+        display: flex;
+        margin: 10%;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    [class*="feature-"] {
+        flex: 0 0 50%;
+    }
+
+    .productive {
+        display: flex;
+        margin-right: 5%;
+    }
+    .productive-details {
+        align-self: center;
+        margin-left: 5%;
+    }
+
+    .testimonials {
+        display: flex;
+    }
+
+
+    [class*="testimonial-"] {
+        flex: 0 0 30%;
+    }
+
+    footer {
+        padding-top: 100px;
+        padding-left: 50px;
+        margin: 0;
+        background-color: hsl(216, 53%, 9%);
+    }
+    .footer-items {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    [class*="footer-"] {
+        flex: 0 0 16%;
+    }
+
+    .footer-1 {
+        flex: 0 0 30%;
+    }
+
+    [class*="footer-nav-"] {
+        margin: 0;
+    }
+
+    .text-button {
+        display: flex;
+        justify-content: center;
+    }
+    .cta {
+        width: 50%;
+        position: relative;
+        top: 150px;
+    }
+    input {
+        height: 50px;
+        padding: 0;
+        flex: 0 0 65%;
+    }
+    .cta button {
+        padding: 0;
+        height: 50px;
+        flex: 0 0 30%;
+    }
+
+
+    .contact-1 .details {
+     width: 80%;   
+    }
+}
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; margin-bottom: 0}
+.attribution a { color: hsl(228, 45%, 44%); }
